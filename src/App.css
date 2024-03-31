@@ -1,0 +1,74 @@
+/* Estilos generales */
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  margin: 0; /* Eliminar margen predeterminado del cuerpo */
+  width: 100%;
+  height: 100%;
+  background-image: url('Cybertruck.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}
+
+/* Estilos para la sección de menú desplegable */
+.secciondos {
+  text-align: center;
+  margin-top: 0; /* Eliminar margen superior */
+  width: calc(100%/3);
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.253);
+  border-bottom-left-radius: 20px; /* Radio de borde inferior izquierdo */
+  border-bottom-right-radius: 20px; /* Radio de borde inferior derecho */
+  overflow: hidden; /* Para ocultar el contenido que está fuera del contenedor */
+  transition: height 0.5s ease; /* Agrega una transición suave para la altura */
+}
+
+/* Estilos para la expansión de la sección de menú desplegable */
+.secciondos.expanded {
+  height: 15vh; /* Altura mayor para la expansión */
+}
+
+/* Estilos para las imágenes dentro de la sección de menú desplegable */
+.secciondos div img {
+  opacity: 0; /* Hace que las imágenes estén inicialmente ocultas */
+  transition: opacity 0.5s ease; /* Agrega una transición suave para la opacidad */
+}
+
+/* Estilos para mostrar las imágenes dentro de la sección de menú desplegable */
+.secciondos.expanded div img {
+  opacity: 1; /* Hace que las imágenes se vuelvan visibles cuando se expande */
+}
+
+/* Estilos para las demás secciones */
+.seccion {
+  margin-left: 2%;
+  display: flex;
+  align-items: center;
+}
+
+.seccion3 {
+  margin-left: 5%;
+}
+
+/* Estilos para las imágenes en la barra de navegación */
+.navbar img {
+  margin-right: 10px; /* Espaciado entre las imágenes */
+  transition: transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+/* Estilos para las imágenes cuando se les hace hover */
+.navbar img:hover {
+  transform: scale(1.1); /* Escala ligeramente la imagen al hacer hover */
+}
